@@ -1,0 +1,19 @@
+import random
+import time
+import keyboard
+
+# Definir o intervalo de tempo mínimo e máximo (em segundos)
+min_interval = 125.0000000
+max_interval = 200.0000000
+
+while True:
+    # Gerar um intervalo de tempo aleatório
+    interval = random.uniform(min_interval, max_interval)
+    
+    # Aguardar o intervalo de tempo
+    time.sleep(interval)
+    
+    # Pressionar a tecla espaço
+    keyboard.press_and_release(' ')
+    
+    print(f"Tecla espaço pressionada após {interval:.2f} segundos.") #
